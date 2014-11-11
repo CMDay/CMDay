@@ -15,21 +15,23 @@ var alarmManager = alarmModule.createAlarmManager();
 //Create a date variable to be used later 
 var now = new Date();
 
-//Set an Alarm to publish a notification in about two minutes
-alarmManager.addAlarmNotification({
-    // icon: Ti.App.Android.R.drawable.appicon, //Optional icon must be a resource id or url
-    icon: 'app/assets/android/appicon.png',
-    minute:2, //Set the number of minutes until the alarm should go off
-    contentTitle:'Alarm #2', //Set the title of the Notification that will appear
-    contentText:'Alarm & Notify Basic Repeat', //Set the body of the notification that will apear
-    vibrate: true,
-    showLights: true
-}); 
-var ew1 = Ti.UI.createAlertDialog({
-    title:'Info', message:"You should see your alarm notification in about 2 minutes & repeat each minute",
-    buttonNames:[Ti.Android.currentActivity.getString(Ti.Android.R.string.ok)]
-});
-ew1.show();
+function setAlarm(e) {
+	//Set an Alarm to publish a notification in about two minutes
+	alarmManager.addAlarmNotification({
+	    // icon: Ti.App.Android.R.drawable.appicon, //Optional icon must be a resource id or url
+	    icon: 'app/assets/android/appicon.png',
+	    minute:2, //Set the number of minutes until the alarm should go off
+	    contentTitle:'Alarm #2', //Set the title of the Notification that will appear
+	    contentText:'Alarm & Notify Basic Repeat', //Set the body of the notification that will apear
+	    vibrate: true,
+	    showLights: true
+	}); 
+	var ew1 = Ti.UI.createAlertDialog({
+	    title:'Info', message:"You should see your alarm notification in about 2 minutes & repeat each minute",
+	    buttonNames:[Ti.Android.currentActivity.getString(Ti.Android.R.string.ok)]
+	});
+	ew1.show();
+}
 
 //Below is an example on how you can provide a full date to schedule your alarm
 //Set an Alarm to publish a notification in about two minutes and repeat each minute
