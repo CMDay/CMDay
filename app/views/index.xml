@@ -1,5 +1,7 @@
 <Alloy>
 	<Window class="container">
-		<Label id="label" onClick="setAlarm">Click here to set alarm</Label>
+		<!-- <Label id="label" onClick="setAlarm">Click here to set alarm</Label> -->
+		
+		<Button id="button" onClick="openTimePickerWindow" bottom="10">Stel alarm in</Button>
 	</Window>
 </Alloy>

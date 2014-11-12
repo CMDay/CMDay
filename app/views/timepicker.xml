@@ -1,0 +1,9 @@
+<Alloy>
+	<Window class="container">
+		<Picker id="picker"
+          onChange="report"
+          type="Ti.UI.PICKER_TYPE_TIME"
+          format24="true">
+        </Picker>
+	</Window>
+</Alloy>
