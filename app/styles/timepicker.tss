@@ -1,4 +1,7 @@
-
 ".container" : {
   
+}
+
+"Window": {
+	backgroundImage: "/background.png"
 }

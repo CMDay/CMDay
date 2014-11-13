@@ -1,15 +1,37 @@
-".container": {
-	backgroundColor:"white"
+// ".container": {
+"Window": {
+	backgroundImage: "/background.png"
 }
 
-"Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	color: "#000"
+".wekker": {
+	width: "80%",
+	height: "25%",
+	top: "30",
+	// backgroundColor: "white",
+	borderColor: "white",
+	borderWidth: "1",
+	borderRadius: "7"
 }
-
-"#label": {
+".wekkerTijd": {
+	top: "10",
+	left: "10",
 	font: {
-		fontSize: 12
-	}
+		fontSize: 16
+	},
 }
+"#button": {
+	bottom: "10",
+	right: "10"
+}
+
+// "Label": {
+	// width: Ti.UI.SIZE,
+	// height: Ti.UI.SIZE,
+	// color: "#000"
+// }
+// 
+// "#label": {
+	// font: {
+		// fontSize: 12
+	// }
+// }

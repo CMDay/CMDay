@@ -2,6 +2,11 @@
 	<Window class="container">
 		<!-- <Label id="label" onClick="setAlarm">Click here to set alarm</Label> -->
 		
-		<Button id="button" onClick="openTimePickerWindow" bottom="10">Stel alarm in</Button>
+		<View class="wekker">
+			<Label class="wekkerTijd">7:00</Label>
+			<Button id="button" onClick="openTimePickerWindow">Stel alarm in</Button>
+		</View>
+		
+		<!-- <Button id="button2" onClick="openQuestionsWindow">Vragen</Button> -->
 	</Window>
 </Alloy>

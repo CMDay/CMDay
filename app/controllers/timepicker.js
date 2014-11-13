@@ -44,6 +44,8 @@ button.addEventListener('click',function(e)
 	
 	// Ti.API.info('You clicked the button: ' + setTime);
 	
+	Ti.App.Properties.setString('cmdayalarm', setTime);
+	
 	var minutesBetweenDates = Math.round(getMinutesBetweenDates(now, setTime));
 	// Ti.API.info('Minuts between: ' + minutesBetweenDates);
    
@@ -53,11 +55,16 @@ button.addEventListener('click',function(e)
 	    minute: minutesBetweenDates, //Set the number of minutes until the alarm should go off
 	    
 	    // icon: 'app/assets/android/appicon.png',
+	    playSound: true,
+	    // sound: Ti.Filesystem.getResRawDirectory() + 'alarm', //Set a custom sound to play, located at: platform/android/res/raw/alarm.mp3
+	    
 	    contentTitle: 'Wakker worden!!!!',
 	    contentText: 'Alarm & Notify Basic Repeat',
 	    vibrate: true,
 	    showLights: true
 	});
+	
+	Ti.App.fireEvent('changeAlarmTime', { time : setTime });
 	
 	winTimePicker.close();
 });

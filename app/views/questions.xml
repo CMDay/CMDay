@@ -1,0 +1,6 @@
+<Alloy>
+    <Window id="win">
+		<View></View>
+		<Label></Label>
+    </Window>
+</Alloy>
