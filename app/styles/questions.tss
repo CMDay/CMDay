@@ -1,9 +1,6 @@
-// "#win": {
-	// backgroundColor:"white"
-// }
-// "#win": {
-	// backgroundImage: "/background.png"
-// }
+"Window": {
+	backgroundImage: "/background.png"
+}
 
 "Label": {
 	// width: Ti.UI.SIZE,
@@ -11,9 +8,9 @@
 	color: "#000"
 }
 
-"#question": {
-	font: {
-		fontSize: 16
-	},
-	top: 50
-}
+// "#question": {
+	// font: {
+		// fontSize: 16
+	// },
+	// top: 50
+// }

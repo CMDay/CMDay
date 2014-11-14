@@ -1,5 +1,4 @@
 // Window
-// var qWin = $.questions;
 var qWin = Ti.UI.createWindow();
 var self = Ti.UI.createView({top: 50});
 
@@ -119,10 +118,7 @@ var self = Ti.UI.createView({top: 50});
 	   title: 'Beantwoord',
 	   top: 260,
 	   left: 20,
-	   // width: 100,
-	   // height: 30,
-	   // backgroundColor: "#fff",
-	   color: "#FFF",
+	   color: "#FFF"
 	});
 	
 	// Geluidje als correct antwoord is gegeven
@@ -137,13 +133,24 @@ var self = Ti.UI.createView({top: 50});
 		preload: true
 	});
 	
+	// Irritating looping sound
+	var alarm = Titanium.Media.createSound({
+		url: '/alarm.wav',
+		preload: true,
+		looping: true
+	});
+	
 	// Beantwoord button click event
 	button.addEventListener('click', function() {
 		if(answer) {
 			if(answer == 3) {
+				alarm.stop();
+				
 				// Speel geluidje af
 				correct.play();
 				alert("Je hebt het goed beantwoord");
+				
+				Ti.App.Properties.setString('answeredquestion', 'true');
 				
 				qWin.close();
 			} else {
@@ -160,3 +167,8 @@ qWin.add(self);
 qWin.add(label);
 qWin.add(button);
 qWin.open();
+
+qWin.addEventListener('open', function (e) 
+{
+	alarm.play();
+});
