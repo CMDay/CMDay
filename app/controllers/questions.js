@@ -11,11 +11,11 @@ var self = Ti.UI.createView({top: 50});
     var checkBoxImageOff = [];
     var caption = [];
 	var questions = [
-		{vraag: 'Wat is 5 plus 5?', antwoorden: [5, 8, 10, 12]},
-		{vraag: 'Wat is 6 plus 6?', antwoorden: [5, 8, 12, 10]},
-		{vraag: 'Wat is 8 plus 8?', antwoorden: [5, 8, 16, 10]},
-		{vraag: 'Wat is 10 plus 10?', antwoorden: [5, 8, 20, 12]},
-		{vraag: 'Wat is 12 plus 12?', antwoorden: [5, 8, 24, 12]},
+		{vraag: 'Wat is de afkorting van HTML?', antwoorden: ['Home Tool Markup Language', 'Hyperlinks and Text Markup Language', 'Hyper Text Markup Language', 'Home Text Markup Language']},
+		{vraag: 'Wie maakt de Web standaarden?', antwoorden: ['Microsoft', 'Mozilla', 'The World Wide Web Consortium', 'Google']},
+		{vraag: 'Wat is de grootste heading tag?', antwoorden: ['<h6>', '<heading>', '<h1>', '<head>']},
+		{vraag: 'Hoe kan je een e-mail link maken?', antwoorden: ['<mail>xxx@yyy</mail>', '<mail href="xxx@yyy">', '<a href="mailto:xxx@yyy">', '<a href="xxx@yyy">']},
+		{vraag: 'Hoe kan je een genummerde lijst maken?', antwoorden: ['<list>', '<ul>', '<ol>', '<dl>']},
 	];
 	var random = Math.round(Math.random(0, questions.length));
 	var question = questions[random].vraag;
